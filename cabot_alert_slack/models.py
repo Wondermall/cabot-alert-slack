@@ -45,7 +45,7 @@ class SlackAlert(AlertPlugin):
             'jenkins_api': settings.JENKINS_API,
         })
         message = Template(slack_template).render(c)
-        self._send_slack_alert(message, color=color, sender='Cabot/%s' % service.name)
+        self._send_slack_alert(message, color=color, sender='Cabot')
 
     def _send_slack_alert(self, message, color='green', sender='Cabot'):
 
